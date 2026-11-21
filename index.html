@@ -4,183 +4,138 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iLock: a free app locker for Android that cannot go online</title>
-<meta name="description" content="iLock puts a PIN, pattern or fingerprint in front of the apps you choose. Free, no adverts, and no internet permission, so nothing leaves your phone.">
+<meta name="description" content="iLock puts a PIN, a pattern, a password, a knock code or your fingerprint in front of the apps you choose, with Quick Lock, hand-over mode, private notifications and a break-in log. Free, no adverts, no account and no internet permission.">
 <meta name="author" content="Jonathan Jackson">
 <link rel="canonical" href="https://customgpter.github.io/ilock/">
-<meta name="theme-color" content="#f3f6fb" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0a0e14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f2f5fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="iLock">
 <meta property="og:title" content="iLock: a free app locker for Android that cannot go online">
-<meta property="og:description" content="iLock puts a PIN, pattern or fingerprint in front of the apps you choose. Free, no adverts, and no internet permission, so nothing leaves your phone.">
+<meta property="og:description" content="iLock puts a PIN, a pattern, a password, a knock code or your fingerprint in front of the apps you choose, with Quick Lock, hand-over mode, private notifications and a break-in log. Free, no adverts, no account and no internet permission.">
 <meta property="og:url" content="https://customgpter.github.io/ilock/">
 <meta property="og:image" content="https://customgpter.github.io/ilock/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The iLock padlock icon beside the words: an app locker that cannot go online">
+<meta property="og:image:alt" content="iLock&#x27;s home screen showing Protected, with five apps locked">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/literata-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=1">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"iLock","url":"https://customgpter.github.io/ilock/","description":"iLock is an Android app locker. It puts a PIN, password, pattern, knock code or fingerprint in front of the apps you choose, and has no internet permission.","applicationCategory":"SecurityApplication","applicationSubCategory":"App locker","operatingSystem":"Android 11 or later","softwareVersion":"1.0.2","downloadUrl":"https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk","releaseNotes":"https://customgpter.github.io/ilock/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/ilock/assets/og.png","featureList":["Six ways to unlock","Locks the moment an app opens","Each app can have its own rule","Quick Lock widget","Hand-over mode","Harder to remove","Wrong tries are logged","Intruder photo","Private notifications","Disguises","Safe from glances","A lock screen that fits"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"iLock","url":"https://customgpter.github.io/ilock/","inLanguage":"en-GB"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is iLock really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked away."}},{"@type":"Question","name":"Is iLock on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. iLock is a personal project and is downloaded from this site as an Android app file. It needs Android 11 or later."}},{"@type":"Question","name":"Can iLock see what is inside my apps?","acceptedAnswer":{"@type":"Answer","text":"No. iLock learns one thing from Android: which app has just come to the front, so that it can show the lock. It does not read what is on the screen and does not record what you type."}},{"@type":"Question","name":"Does anything leave my phone?","acceptedAnswer":{"@type":"Answer","text":"No, and it cannot. iLock does not have Android's internet permission, so it has no way to send anything anywhere. You can check this yourself: open iLock's App info in your phone's settings and look at its permissions."}},{"@type":"Question","name":"What if I forget my code?","acceptedAnswer":{"@type":"Answer","text":"When you set iLock up it shows you a recovery code once, and you can add a security question. Either one lets you choose a new code. If you have lost both, uninstalling iLock removes the locks. Your apps and what is in them are not touched."}},{"@type":"Question","name":"Can someone just uninstall it?","acceptedAnswer":{"@type":"Answer","text":"Not easily, if you turn on tamper protection: the Settings app and uninstall prompts then ask for your code, and Android can be told to refuse to uninstall iLock. A person who knows your phone's own screen lock and restarts the phone in Safe mode can still remove it. iLock stops casual access. It is not a replacement for your phone's screen lock."}},{"@type":"Question","name":"Why does Android say the setting is restricted?","acceptedAnswer":{"@type":"Answer","text":"Android blocks the accessibility switch for any app that was installed from a file and not from an app store. Try to switch iLock on once, so that Android shows its message. Then open iLock's App info, use the menu at the top right and choose Allow restricted settings, and switch it on again. iLock's setup screen walks you through this."}},{"@type":"Question","name":"Why does it need the accessibility service?","acceptedAnswer":{"@type":"Answer","text":"It is how Android tells an app, straight away, that a different app has opened. iLock asks for that and nothing more: the service is set up so that it cannot read the contents of a window."}},{"@type":"Question","name":"Is the intruder photo secret?","acceptedAnswer":{"@type":"Answer","text":"Not entirely. Android shows its green camera dot at the top of the screen whenever any app uses the camera, and iLock cannot hide that. The photo is saved inside iLock, not in your gallery."}},{"@type":"Question","name":"How do I update iLock?","acceptedAnswer":{"@type":"Answer","text":"Because iLock cannot go online, it cannot check for updates by itself. In Settings, Check for updates opens the download page in your browser. Install the new version over the one you have and your code, your locked apps and your settings are kept."}}]}</script>
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"iLock","url":"https://customgpter.github.io/ilock/","description":"iLock puts a PIN, a pattern, a password, a knock code or your fingerprint in front of the apps you choose, with Quick Lock, hand-over mode, private notifications and a break-in log. Free, no adverts, no account and no internet permission.","applicationCategory":"SecurityApplication","operatingSystem":"Android 11 or later","softwareVersion":"1.0.2","downloadUrl":"https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk","releaseNotes":"https://customgpter.github.io/ilock/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/ilock/assets/og.png","featureList":["Six ways to unlock","Locks the moment an app opens","A rule for each app","A lock screen that fits","Quick Lock widget","Hand-over mode","Private notifications","Pause and safe hours","Wrong tries are logged","Intruder photo","Harder to remove","Disguises"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is iLock really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked away. See the comparison."}},{"@type":"Question","name":"Is iLock on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. iLock is a personal project and is downloaded from this site as an Android app file. It needs Android 11 or later."}},{"@type":"Question","name":"Can iLock see what is inside my apps?","acceptedAnswer":{"@type":"Answer","text":"No. iLock learns one thing from Android: which app has just come to the front, so that it can show the lock. It does not read what is on the screen and does not record what you type."}},{"@type":"Question","name":"Does anything leave my phone?","acceptedAnswer":{"@type":"Answer","text":"No, and it cannot. iLock does not have Android's internet permission, so it has no way to send anything anywhere. You can check this yourself: open iLock's App info in your phone's settings and look at its permissions. The detail is in the privacy policy."}},{"@type":"Question","name":"What if I forget my code?","acceptedAnswer":{"@type":"Answer","text":"When you set iLock up it shows you a recovery code once, and you can add a security question. Either one lets you choose a new code. If you have lost both, uninstalling iLock removes the locks. Your apps and what is in them are not touched."}},{"@type":"Question","name":"Can someone just uninstall it?","acceptedAnswer":{"@type":"Answer","text":"Not easily, if you turn on tamper protection: the Settings app and uninstall prompts then ask for your code, and Android can be told to refuse to uninstall iLock. A person who knows your phone's own screen lock and restarts the phone in Safe mode can still remove it. iLock stops casual access. It is not a replacement for your phone's screen lock. More on this above."}},{"@type":"Question","name":"Why does Android say the setting is restricted?","acceptedAnswer":{"@type":"Answer","text":"Android blocks the accessibility switch for any app that was installed from a file and not from an app store. Try to switch iLock on once, so that Android shows its message. Then open iLock's App info, use the menu at the top right and choose Allow restricted settings, and switch it on again. iLock's setup screen walks you through this."}},{"@type":"Question","name":"Why does it need the accessibility service?","acceptedAnswer":{"@type":"Answer","text":"It is how Android tells an app, straight away, that a different app has opened. iLock asks for that and nothing more: the service is set up so that it cannot read the contents of a window."}},{"@type":"Question","name":"Is the intruder photo secret?","acceptedAnswer":{"@type":"Answer","text":"Not entirely. Android shows its green camera dot at the top of the screen whenever any app uses the camera, and iLock cannot hide that. The photo is saved inside iLock, not in your gallery."}},{"@type":"Question","name":"How do I update iLock?","acceptedAnswer":{"@type":"Answer","text":"Because iLock cannot go online, it cannot check for updates by itself. In Settings, Check for updates opens the download page in your browser. Install the new version over the one you have and your code, your locked apps and your settings are kept."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
 <div class="wrap">
-<a class="brand" href="./" aria-label="iLock home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="brand-il" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c97ff"/><stop offset="1" stop-color="#1748b5"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#brand-il)"/><g transform="translate(28.8 27.8) scale(2.1)"><path fill="#fff" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/><path fill="#1f5fd6" d="M12 12.2a1.9 1.9 0 0 0-.9 3.57V17.6a.9.9 0 0 0 1.8 0v-1.83A1.9 1.9 0 0 0 12 12.2z"/></g></svg><span>iLock</span></a>
-<nav aria-label="Main"><ul><li><a href="./#features" aria-current="page">Features</a></li><li><a href="compare.html">Compare</a></li><li><a href="releases.html">Releases</a></li><li><a class="more-apps" href="more-apps.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="licences.html">Licences</a></li></ul></nav>
+<a class="brand" href="./" aria-label="iLock home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="mapp-il" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c97ff"/><stop offset="1" stop-color="#1748b5"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#mapp-il)"/><g transform="translate(28.8 27.8) scale(2.1)"><path fill="#fff" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/><path fill="#1f5fd6" d="M12 12.2a1.9 1.9 0 0 0-.9 3.57V17.6a.9.9 0 0 0 1.8 0v-1.83A1.9 1.9 0 0 0 12 12.2z"/></g></svg><span>iLock</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
 </div>
 </header>
 <main id="main">
 <div class="hero">
 <div class="wrap hero-grid">
 <div class="hero-copy">
-<h1>Your apps, behind your own lock</h1>
-<p class="lede">Hand your phone to someone and they can open anything on it. iLock is an Android app that puts a PIN, a pattern or your fingerprint in front of the apps you choose, such as your messages, your photos and your banking.</p>
-<p class="lede">It is free, with no adverts and nothing to unlock. And it cannot go online: iLock has no internet permission, so your code, your logs and your photos stay on your phone.</p>
-<p class="get"><a class="button" href="https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk">Download for Android</a></p>
-<p class="facts">Free, with nothing to unlock. Android 11 or later. No ads, no accounts, no internet access. <a href="compare.html">Compare</a> &middot; <a href="releases.html">Release notes</a></p>
+<h1>Your apps, behind your own lock.</h1>
+<p class="lede">Hand your phone to someone and they can open anything on it. iLock is an Android app that puts a PIN, a pattern or your fingerprint in front of the apps you choose, such as your messages, your photos and your banking.</p><p class="lede">It is free, with no adverts and nothing to unlock. And it cannot go online: iLock has no internet permission, so your code, your logs and your photos stay on your phone.</p>
+
+<p class="get" id="download"><a class="button" href="https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p>
+<ul class="pills"><li>Version 1.0.2</li><li>Android 11 or later</li><li>3.6 MB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
 <p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
 </div>
-<div class="demo" role="img" aria-label="An example of iLock at work. The lock screen for an app called Messages asks for a PIN, with four dots filled in above a number pad. Below, a list shows Messages and Banking as locked, Photos as locked until the screen turns off, and Maps as open."><div class="lockscreen"><span class="ls-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1f5fd6" d="M5 4h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-4.6 3.4A.9.9 0 0 1 6 20.7V18H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z"/><circle cx="8" cy="11" r="1.4" fill="#fff"/><circle cx="12" cy="11" r="1.4" fill="#fff"/><circle cx="16" cy="11" r="1.4" fill="#fff"/></svg></span><span class="ls-name">Messages</span><span class="ls-ask">Enter your PIN</span><div class="ls-dots"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i></div><div class="ls-keys"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span class="blank"></span><span>0</span><span class="blank"></span></div></div><div class="sheet"><ul class="rows"><li class="row" style="--j:0"><span class="k">Messages</span><span class="v">Asks every time</span><span class="t">Locked</span></li><li class="row" style="--j:1"><span class="k">Banking</span><span class="v">Asks every time</span><span class="t">Locked</span></li><li class="row" style="--j:2"><span class="k">Photos</span><span class="v">Until the screen turns off</span><span class="t">Locked</span></li><li class="row open" style="--j:3"><span class="k">Maps</span><span class="v">Opens as normal</span><span class="t">Open</span></li></ul></div></div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/home.png" alt="Home: whether protection is working, Quick Lock, hand-over mode and apps worth locking." width="393" height="852" fetchpriority="high"></div></div>
 </div>
 </div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No subscription</b><span>Every feature is in the free app.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No account</b><span>There is nothing to sign up to.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet</b><span>It has no permission to go online.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code with made-up apps and a made-up access log. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from iLock"><figure class="shot"><div class="phone"><img src="./assets/screens/home.png" alt="Home: whether protection is working, Quick Lock, hand-over mode and apps worth locking." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Home: whether protection is working, Quick Lock, hand-over mode and apps worth locking.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/apps.png" alt="Apps: tap the padlock beside any app, with a rule and options for each." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Apps: tap the padlock beside any app, with a rule and options for each.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/lock.png" alt="The lock takes on the colour of the app behind it." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The lock takes on the colour of the app behind it.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/pattern.png" alt="Or unlock with a pattern, a password or a knock code." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Or unlock with a pattern, a password or a knock code.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/activity.png" alt="Every unlock and wrong code, with the app and the time." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Every unlock and wrong code, with the app and the time.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/notifications.png" alt="Notifications hidden from a locked app, kept here to read." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Notifications hidden from a locked app, kept here to read.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/settings.png" alt="Settings: your code, recovery, fingerprint and relock rules." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Settings: your code, recovery, fingerprint and relock rules.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/crash.png" alt="A locked app can pretend it has crashed." width="393" height="852" loading="eager" decoding="async"></div><figcaption>A locked app can pretend it has crashed.</figcaption></figure></div>
+</div>
+</section>
 
 <section id="how" aria-labelledby="how-h">
 <div class="wrap">
 <h2 id="how-h">How it works</h2>
 <p class="intro">Your phone's screen lock guards the front door. iLock adds a lock to the rooms inside, for the times the phone is already unlocked and in someone else's hand.</p>
-<ol class="steps">
-<li><h3>Choose a code</h3><p>Pick a PIN, a password, a pattern or a knock code, and write down the recovery code iLock shows you. Add your fingerprint if you like.</p></li>
-<li><h3>Pick the apps</h3><p>Tap the padlock beside any app. iLock suggests the ones that usually hold private things, and you can lock them all at once with <span class="path">Lock all</span>.</p></li>
-<li><h3>Carry on as normal</h3><p>Open a locked app and iLock asks for your code first. Everything else on the phone opens as it always did.</p></li>
-</ol>
+<ol class="steps"><li><h3>Choose a code</h3><p>Pick a PIN, a password, a pattern or a knock code, and write down the recovery code iLock shows you. Add your fingerprint if you like.</p></li><li><h3>Pick the apps</h3><p>Tap Lock beside any app. iLock suggests the ones that usually hold private things, and Lock all does them at once.</p></li><li><h3>Carry on as normal</h3><p>Open a locked app and iLock asks for your code first. Everything else on the phone opens as it always did.</p></li></ol>
 </div>
 </section>
 
 <section id="features" aria-labelledby="features-h">
 <div class="wrap">
 <h2 id="features-h">Everything is in, and all of it is free</h2>
-<p class="intro">Locking an app takes one tap. The rest is for the days you need more: a phone passed round at a party, a child who knows your screen lock, or someone who keeps trying your PIN.</p>
-<dl class="features">
-<div><dt>Six ways to unlock</dt><dd>A 4-digit PIN, a 6-digit PIN, a PIN of any length, a full password, a pattern, or a knock code tapped on four squares. Fingerprint or face unlock sits on top of whichever you choose.</dd></div>
-<div><dt>Locks the moment an app opens</dt><dd>iLock covers a locked app before any of it can be seen, then asks for your code. A back-up route keeps locking if Android ever switches the main one off.</dd></div>
-<div><dt>Each app can have its own rule</dt><dd>Lock again as soon as you leave, after one, five or fifteen minutes away, or when the screen turns off. Set a default, then give your banking app a stricter rule than your gallery.</dd></div>
-<div><dt>Quick Lock widget</dt><dd>One tap on a home-screen button, or a tile in the quick-settings panel, locks a list of apps you chose and re-locks everything else, without opening iLock. Switching it off needs your code.</dd></div>
-<div><dt>Hand-over mode</dt><dd>Passing your phone to someone? One switch locks everything except the apps you allow, so a child can have a game, or a friend the maps, and nothing more.</dd></div>
-<div><dt>Harder to remove</dt><dd>Lock the Settings app, uninstall prompts and the app stores, and ask Android to refuse to uninstall iLock. A new app can be locked from the notification that appears when it is installed.</dd></div>
-<div><dt>Wrong tries are logged</dt><dd>You choose how many wrong tries are allowed. After that the waits grow: thirty seconds, a minute, then five. Every unlock and every wrong code is listed with the app and the time.</dd></div>
-<div><dt>Intruder photo</dt><dd>Optionally photograph whoever keeps getting the code wrong, with the front camera. Photos are kept inside iLock on the phone and nowhere else.</dd></div>
-<div><dt>Private notifications</dt><dd>For each locked app, show that something arrived while hiding who sent it and what it says, or hide the notification altogether and read it in iLock after you unlock.</dd></div>
-<div><dt>Disguises</dt><dd>A locked app can pretend to have crashed, with the real lock behind a press and hold. iLock itself can sit on your home screen as a plain Calculator.</dd></div>
-<div><dt>Safe from glances</dt><dd>Scramble the keypad so the numbers move each time, stop keys lighting up when touched, and draw your pattern with no line showing.</dd></div>
-<div><dt>A lock screen that fits</dt><dd>The lock screen takes on the colour of the app behind it. iLock is dark by default, with light and follow-the-phone options.</dd></div>
-</dl>
-</div>
-</section>
-
-<section id="permissions" aria-labelledby="permissions-h">
-<div class="wrap">
-<h2 id="permissions-h">What it asks of your phone</h2>
-<p class="intro">An app locker has to see which app is opening, so it needs more of Android's trust than most apps. This is everything iLock asks for, and what it does with each.</p>
-<div class="scroll">
-<table>
-<thead><tr><th scope="col">Access</th><th scope="col">What iLock does with it</th><th scope="col">What it never does</th></tr></thead>
-<tbody>
-<tr><th scope="row">Accessibility service</th><td>Hears from Android the moment a different app comes to the front, so that it can show the lock.</td><td>Read what is on the screen, or record what you type. The service is set up without the ability to read window contents.</td></tr>
-<tr><th scope="row">Usage access</th><td>A back-up way to see which app was opened last, used only if the accessibility service is off.</td><td>Build a history of what you do.</td></tr>
-<tr><th scope="row">Display over other apps</th><td>Covers a locked app at once, so none of it shows while the lock screen opens.</td><td>Draw over anything that is not locked.</td></tr>
-<tr><th scope="row">The list of your apps</th><td>Shows your apps so that you can choose which to lock.</td><td>Send the list anywhere. It has no way to.</td></tr>
-<tr><th scope="row">Fingerprint or face</th><td>Asks Android to check it is you. Android answers yes or no.</td><td>See or store your fingerprint or face.</td></tr>
-<tr><th scope="row">Camera</th><td>Takes the intruder photo, and only if you switch that on.</td><td>Use the camera at any other time.</td></tr>
-<tr><th scope="row">Notification access</th><td>Masks or hides notifications from locked apps, and only if you choose that for an app.</td><td>Touch notifications from any other app.</td></tr>
-<tr><th scope="row">Notifications</th><td>Offers to lock an app you have just installed, and shows masked notifications.</td><td>Advertise, or nag you to open the app.</td></tr>
-<tr><th scope="row">Running in the background</th><td>Starts again after a restart, and asks Android not to put it to sleep, so that locked apps stay locked.</td><td>Run anything that is not part of locking.</td></tr>
-</tbody>
-</table>
-</div>
-<p class="after-table">iLock does not ask for the internet, your contacts, your location, your microphone or your files. The detail is in the <a href="privacy.html">privacy policy</a>.</p>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Locking</h3><dl><div><dt>Six ways to unlock</dt><dd>A 4-digit PIN, a 6-digit PIN, a PIN of any length, a password, a pattern, or a knock code, with fingerprint or face unlock on top.</dd></div><div><dt>Locks the moment an app opens</dt><dd>iLock covers a locked app before any of it can be seen, then asks for your code. A back-up route keeps locking if Android switches the main one off.</dd></div><div><dt>A rule for each app</dt><dd>Lock again on leaving, after one, five or fifteen minutes, or when the screen turns off. Give your bank a stricter rule than your gallery.</dd></div><div><dt>A lock screen that fits</dt><dd>It takes on the colour of the app behind it, with a scrambled keypad, hidden key presses and a hidden pattern line if you want them.</dd></div></dl></div><div class="group"><h3>Everyday</h3><dl><div><dt>Quick Lock widget</dt><dd>One tap on a home-screen button or a quick-settings tile locks the apps you chose, without opening iLock.</dd></div><div><dt>Hand-over mode</dt><dd>Passing your phone to someone? One switch locks everything except the apps you allow.</dd></div><div><dt>Private notifications</dt><dd>For a locked app, show that something arrived but hide who and what, or hide it altogether and read it in iLock.</dd></div><div><dt>Pause and safe hours</dt><dd>A 15-minute pause, and a time window with no locks, such as overnight at home.</dd></div></dl></div><div class="group"><h3>Protection</h3><dl><div><dt>Wrong tries are logged</dt><dd>Choose how many wrong tries are allowed, then the waits grow. Every unlock and wrong code is listed with the app and the time.</dd></div><div><dt>Intruder photo</dt><dd>Optionally photograph whoever keeps getting the code wrong. Photos stay inside iLock on the phone.</dd></div><div><dt>Harder to remove</dt><dd>Lock Settings, uninstall prompts and the app stores, and ask Android to refuse to uninstall iLock.</dd></div><div><dt>Disguises</dt><dd>A locked app can pretend to have crashed, with the real lock behind a press and hold. iLock itself can look like a Calculator.</dd></div></dl></div></div>
 </div>
 </section>
 
 <section id="privacy" aria-labelledby="privacy-h">
 <div class="wrap">
 <h2 id="privacy-h">A locker you do not have to trust</h2>
-<ul class="plain">
-<li><h3>It cannot go online</h3><p>A locker sees every app you open. iLock has no internet permission, so what it sees has nowhere to go. Android shows this in the app's permissions, where anyone can check it.</p></li>
-<li><h3>Your code is never stored</h3><p>iLock keeps a scrambled, one-way version of your code, not the code itself, in storage that other apps cannot read. Nobody can read your code back out of the app.</p></li>
-<li><h3>No accounts, no adverts</h3><p>There is nothing to sign up for and no advertising, on the lock screen or anywhere else. This site has no cookies and no tracking.</p></li>
-</ul>
+<ul class="plain"><li><h3>It cannot go online</h3><p>A locker sees every app you open. iLock has no internet permission, so what it sees has nowhere to go.</p></li><li><h3>Your code is never stored</h3><p>iLock keeps a scrambled, one-way version of your code, in storage that other apps cannot read.</p></li><li><h3>No ads, no tracking</h3><p>There is no advertising, analytics or tracking in the app or on this site.</p></li></ul>
 </div>
 </section>
 
-<section id="limits" aria-labelledby="limits-h">
+<section id="install" aria-labelledby="install-h">
 <div class="wrap">
-<h2 id="limits-h">What a locker can and cannot do</h2>
-<p class="intro">iLock is honest about its limits, because a lock you overestimate is worse than no lock.</p>
-<dl class="features">
-<div><dt>It stops casual access</dt><dd>A friend scrolling your photos, a child opening your banking app, a colleague reading your messages while you are out of the room: this is what iLock is for.</dd></div>
-<div><dt>It is not your screen lock</dt><dd>Android does not let any app from outside the system lock another app for certain. Someone who knows your phone's own PIN, and knows to restart the phone in Safe mode, can remove any locker. Keep a good screen lock as well.</dd></div>
-<div><dt>Recent apps may show a glimpse</dt><dd>Android's recent-apps screen can show a small picture of an app as you left it. iLock cannot blank that picture, though opening the app from there still asks for your code.</dd></div>
-<div><dt>Lose both keys and the locks go</dt><dd>If you forget your code and have lost your recovery code and security answer, the only way back is to uninstall iLock. Nothing in your apps is lost, but your iLock settings are.</dd></div>
-</dl>
-</div>
-</section>
-
-<section id="free" aria-labelledby="free-h">
-<div class="wrap">
-<h2 id="free-h">Free, without the adverts</h2>
-<p class="intro">iLock has no paid version and carries no adverts. Going by their makers' own Google Play listings, two of the most-installed app lockers show adverts and sell extras inside the app.</p>
-<dl class="features">
-<div><dt>No adverts on your lock screen</dt><dd>AppLock Pro by App Lock LLC and App Lock by Trusted Tools each say on their Google Play listings that they contain ads and offer in-app purchases.</dd></div>
-<div><dt>Nothing held back</dt><dd>AppLock Pro's listing says it can be used without ads &ldquo;at a low price&rdquo;. In iLock there is nothing to pay for.</dd></div>
-<div><dt>No connection to sell</dt><dd>Adverts need the internet. iLock has no internet permission at all.</dd></div>
-<div><dt>The extras are built in</dt><dd>The Quick Lock widget, hand-over mode, per-app rules, notification privacy and the disguises are all part of iLock.</dd></div>
-</dl>
-<p class="more"><a href="compare.html">See the full comparison, with sources</a></p>
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">iLock is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called iLock.apk and is about 3.6 MB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>iLock tells you when a newer version is out. Install the new file over the old one and everything you have saved is kept.</p></li></ol>
+<p class="after-table">Version 1.0.2, released 16 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
 </div>
 </section>
 
 <section id="questions" aria-labelledby="questions-h">
 <div class="wrap">
 <h2 id="questions-h">Questions</h2>
-<div class="faq">
-<div><h3>Is iLock really free?</h3><p>Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked away. <a href="compare.html">See the comparison</a>.</p></div><div><h3>Is iLock on Google Play?</h3><p>No. iLock is a personal project and is downloaded from this site as an Android app file. It needs Android 11 or later.</p></div><div><h3>Can iLock see what is inside my apps?</h3><p>No. iLock learns one thing from Android: which app has just come to the front, so that it can show the lock. It does not read what is on the screen and does not record what you type.</p></div><div><h3>Does anything leave my phone?</h3><p>No, and it cannot. iLock does not have Android's internet permission, so it has no way to send anything anywhere. You can check this yourself: open iLock's App info in your phone's settings and look at its permissions. The detail is in the <a href="privacy.html">privacy policy</a>.</p></div><div><h3>What if I forget my code?</h3><p>When you set iLock up it shows you a recovery code once, and you can add a security question. Either one lets you choose a new code. If you have lost both, uninstalling iLock removes the locks. Your apps and what is in them are not touched.</p></div><div><h3>Can someone just uninstall it?</h3><p>Not easily, if you turn on tamper protection: the Settings app and uninstall prompts then ask for your code, and Android can be told to refuse to uninstall iLock. A person who knows your phone's own screen lock and restarts the phone in Safe mode can still remove it. iLock stops casual access. It is not a replacement for your phone's screen lock. More on this <a href="#limits">above</a>.</p></div><div><h3>Why does Android say the setting is restricted?</h3><p>Android blocks the accessibility switch for any app that was installed from a file and not from an app store. Try to switch iLock on once, so that Android shows its message. Then open iLock's App info, use the menu at the top right and choose Allow restricted settings, and switch it on again. iLock's setup screen walks you through this.</p></div><div><h3>Why does it need the accessibility service?</h3><p>It is how Android tells an app, straight away, that a different app has opened. iLock asks for that and nothing more: the service is set up so that it cannot read the contents of a window.</p></div><div><h3>Is the intruder photo secret?</h3><p>Not entirely. Android shows its green camera dot at the top of the screen whenever any app uses the camera, and iLock cannot hide that. The photo is saved inside iLock, not in your gallery.</p></div><div><h3>How do I update iLock?</h3><p>Because iLock cannot go online, it cannot check for updates by itself. In Settings, Check for updates opens the download page in your browser. Install the new version over the one you have and your code, your locked apps and your settings are kept.</p></div>
-</div>
+<div class="faq"><details><summary>Is iLock really free?</summary><p>Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked away. <a href="compare.html">See the comparison</a>.</p></details><details><summary>Is iLock on Google Play?</summary><p>No. iLock is a personal project and is downloaded from this site as an Android app file. It needs Android 11 or later.</p></details><details><summary>Can iLock see what is inside my apps?</summary><p>No. iLock learns one thing from Android: which app has just come to the front, so that it can show the lock. It does not read what is on the screen and does not record what you type.</p></details><details><summary>Does anything leave my phone?</summary><p>No, and it cannot. iLock does not have Android's internet permission, so it has no way to send anything anywhere. You can check this yourself: open iLock's App info in your phone's settings and look at its permissions. The detail is in the <a href="privacy.html">privacy policy</a>.</p></details><details><summary>What if I forget my code?</summary><p>When you set iLock up it shows you a recovery code once, and you can add a security question. Either one lets you choose a new code. If you have lost both, uninstalling iLock removes the locks. Your apps and what is in them are not touched.</p></details><details><summary>Can someone just uninstall it?</summary><p>Not easily, if you turn on tamper protection: the Settings app and uninstall prompts then ask for your code, and Android can be told to refuse to uninstall iLock. A person who knows your phone's own screen lock and restarts the phone in Safe mode can still remove it. iLock stops casual access. It is not a replacement for your phone's screen lock. More on this <a href="#limits">above</a>.</p></details><details><summary>Why does Android say the setting is restricted?</summary><p>Android blocks the accessibility switch for any app that was installed from a file and not from an app store. Try to switch iLock on once, so that Android shows its message. Then open iLock's App info, use the menu at the top right and choose Allow restricted settings, and switch it on again. iLock's setup screen walks you through this.</p></details><details><summary>Why does it need the accessibility service?</summary><p>It is how Android tells an app, straight away, that a different app has opened. iLock asks for that and nothing more: the service is set up so that it cannot read the contents of a window.</p></details><details><summary>Is the intruder photo secret?</summary><p>Not entirely. Android shows its green camera dot at the top of the screen whenever any app uses the camera, and iLock cannot hide that. The photo is saved inside iLock, not in your gallery.</p></details><details><summary>How do I update iLock?</summary><p>Because iLock cannot go online, it cannot check for updates by itself. In Settings, Check for updates opens the download page in your browser. Install the new version over the one you have and your code, your locked apps and your settings are kept.</p></details></div>
 </div>
 </section>
 
-<section id="get" aria-labelledby="get-h">
-<div class="wrap"><div class="measure">
-<h2 id="get-h">Getting iLock</h2>
-<p>iLock is a personal project and is free, with no paid version. It is downloaded from this site as an Android app file and is not on Google Play. It runs on phones and tablets with Android 11 or later.</p>
-<p class="get"><a class="button" href="https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk">Download for Android</a></p>
-<p>When you download, Chrome may warn that the file might be harmful. It shows this warning for app files that do not come from Google Play; choose Download anyway. If you want to be sure the file is the real one, compare it with the checksum in the <a href="releases.html#checking">release notes</a>.</p>
-<p>Open the downloaded file to install it. The first time, Android asks you to allow your browser to install apps. Google Play Protect may also step in, because iLock is an app it has not seen before: choose More details, then Install anyway. The <a href="releases.html#installing">release notes</a> go through the first-run steps, including Android's restricted-setting message.</p>
-<p>The same developer makes <a href="more-apps.html">other free Android apps</a>. For a question, a problem, or anything about your data, <a href="https://github.com/CustomGPTer/ilock/issues">open an issue on GitHub</a>.</p>
-</div></div>
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Lock the apps that matter</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="https://github.com/CustomGPTer/ilock/releases/latest/download/iLock.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
 </section>
 </main>
 <footer class="colophon">
 <div class="wrap">
 <div>
+<a class="brand" href="./" aria-label="iLock home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="mapp-il" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c97ff"/><stop offset="1" stop-color="#1748b5"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#mapp-il)"/><g transform="translate(28.8 27.8) scale(2.1)"><path fill="#fff" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/><path fill="#1f5fd6" d="M12 12.2a1.9 1.9 0 0 0-.9 3.57V17.6a.9.9 0 0 0 1.8 0v-1.83A1.9 1.9 0 0 0 12 12.2z"/></g></svg><span>iLock</span></a>
 <p>&copy; 2026 Jonathan Jackson. iLock is an independent app.</p>
-<p>This site uses no cookies and no tracking. It is set in Literata and Atkinson Hyperlegible.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
 </div>
-<nav aria-label="Footer"><ul>
+<nav aria-label="The app"><h2>The app</h2><ul>
 <li><a href="./">Home</a></li>
-<li><a href="compare.html">Compare</a></li>
-<li><a href="releases.html">Release notes</a></li>
-<li><a href="more-apps.html">More apps</a></li>
-<li><a href="privacy.html">Privacy policy</a></li>
-<li><a href="terms.html">Terms of use</a></li>
-<li><a href="licences.html">Licences</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
 <li><a href="https://github.com/CustomGPTer/ilock/issues">Contact</a></li>
 </ul></nav>
 </div>
